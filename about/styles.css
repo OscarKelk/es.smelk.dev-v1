@@ -8,6 +8,7 @@ body{
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  
 }
 
 /* Links inside the navbar */
@@ -29,10 +30,49 @@ body{
 }
 
 /* Main content */
-.main {
+.border {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
-} 
+  
+}
+
+#main {
+  /* outline: 3px dotted green; */
+  overflow: auto;
+}
+#main .Owen{
+  margin-left: 15vw;
+  float: left;
+  /* outline: 3px dotted green; */
+  inline-size: min-content;
+}
+
+#main .Oscar{
+  margin-right: 15vw;
+  float: right;
+  /* outline: 3px dotted green; */
+  inline-size: min-content;
+}
+
 h1 {
   font-family: 'Radio Canada', Sans-serif;
+  text-align: center;
+}
 
+h2 {
+  font-family: 'Radio Canada', Sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Radio Canada', Sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  font-family: 'Radio Canada', Sans-serif;
+  font-weight: 200;
 }
