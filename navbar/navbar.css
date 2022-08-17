@@ -1,3 +1,7 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
 nav {
     border-radius: 0px 0px 25px 25px;
     display: inline-flex;
