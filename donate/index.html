@@ -11,8 +11,13 @@
   <body>
     <iframe style="top: 0px;" src="../navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
-      <h1> Donate </h1>
-      <p>Smelk is a non-profit organization that relies on the generosity of our community to keep it going. If you would like to help us keep our services free, you can donate to our organization through the following link: <p class="blink"><a href="https://www.youtube.com">Donate now!!</a></p>
+      <h1 class="blink">Donate now!!</h1>
+      <p>Smelk is a non-profit organization that relies on the generosity of our community to keep it going. If you would like to help us keep our services free, you can donate to our organization through the following form: </p>
+      <form action="/donate/donateConfirmation">
+        <label for="quantity">Donation amount:</label>
+        <input type="number" id="quantity" name="quantity">
+        <input type="Submit">
+      </form>      
       <p>We are a non-profit organization and do not accept any donations for our services. If you would like to donate to our organization, please visit the above link.</p>
   </body>
   </div>
