@@ -1,3 +1,6 @@
+body{
+    background-color: #f9f6f2;
+}
 p.blink {
     animation: blinker 1s linear infinite;
     color: #1c87c9;
@@ -10,7 +13,11 @@ p.blink {
       opacity: 0;
     }
 }
-
 a {
     text-decoration: none;
+}
+#navbar {
+    border: none;
+    height: 60px;
+    width: 100%;
 }

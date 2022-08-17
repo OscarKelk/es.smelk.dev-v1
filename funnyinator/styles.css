@@ -132,3 +132,8 @@ span.codeN {
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
 } 
+#navbar {
+  border:none;
+  height: 60px;
+  width: 100%;
+}

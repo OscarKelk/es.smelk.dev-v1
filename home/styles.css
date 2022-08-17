@@ -85,3 +85,8 @@ ul {
 .main {
   padding-left: 3px;
 }
+#navbar {
+  border:none;
+  height: 60px;
+  width: 100%;
+}
