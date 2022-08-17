@@ -26,6 +26,10 @@ body{
   inline-size: min-content;
 }
 
+img {
+  border-radius: 50%;
+}
+
 h1 {
   font-family: 'Radio Canada', Sans-serif;
   text-align: center;
