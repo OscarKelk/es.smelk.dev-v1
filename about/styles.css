@@ -1,46 +1,18 @@
 body{
   background-color: #f9f6f2;
-
-}
- /* The navigation bar */
- .navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  
+  margin-top: 0px;
+  padding: 0px;
 }
 
-/* Links inside the navbar */
-.navbar a.nav {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Radio Canada', sans-serif;
-  font-size: 24px;
-}
-
-/* Change background on mouse-over */
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-/* Main content */
-.border {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
-  
+#body {
+  margin-top: 60px;
 }
 
 #main {
   /* outline: 3px dotted green; */
   overflow: auto;
 }
-#main .Owen{
+#main .ASkiingrock{
   margin-left: 15vw;
   float: left;
   /* outline: 3px dotted green; */
@@ -78,7 +50,10 @@ ul {
   font-weight: 200;
 }
 #navbar {
-  border:none;
+  border: none;
   height: 57px;
   width: 100%;
+}
+iframe {
+  position: fixed;
 }

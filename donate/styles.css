@@ -1,6 +1,21 @@
 body{
     background-color: #f9f6f2;
+    margin-top: 0px;
+    padding: 0px;
 }
+
+#body {
+    margin-top: 60px;
+  }
+
+iframe {
+    position: fixed;
+}
+#navbar {
+    border: none;
+    height: 57px;
+    width: 100%;
+  }
 p.blink {
     animation: blinker 1s linear infinite;
     color: #1c87c9;
@@ -13,11 +28,27 @@ p.blink {
       opacity: 0;
     }
 }
-a {
-    text-decoration: none;
+h1 {
+    font-family: 'Radio Canada', Sans-serif;
+    text-align: center;
 }
-#navbar {
-    border:none;
-    height: 57px;
-    width: 100%;
-  }
+
+h2 {
+font-family: 'Radio Canada', Sans-serif;
+font-weight: 400;
+}
+
+p {
+font-family: 'Radio Canada', Sans-serif;
+font-weight: 400;
+}
+
+a {
+text-decoration: none;
+}
+
+ul {
+font-family: 'Radio Canada', Sans-serif;
+font-weight: 200;
+}
+
