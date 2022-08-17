@@ -1,0 +1,51 @@
+nav {
+    border-radius: 0px 0px 25px 25px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    top: 0;
+    background-color: #1e2d1d;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    padding-bottom: 10px;
+    margin: 0;
+    position: fixed;
+}
+nav .menuItems a {
+    font-family: "Radio Canada";
+    font-weight: 400;
+    text-align: center;
+    padding: 0px 16px;
+    margin: 0px 8px;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    float: left;    
+}
+nav .menuItems a::before {
+    content: attr(data-text);
+    position: absolute;
+    border-radius: 25px;
+    transition: 0.2s;
+    color: #ba7b0b;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+nav .menuItems a:hover::before {
+    background: #ffffff;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+nav img {
+    float: right;
+}
