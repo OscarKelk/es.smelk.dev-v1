@@ -1,5 +1,6 @@
 body{
   background-color: #f9f6f2;
+
 }
  /* The navigation bar */
  .navbar {
@@ -78,6 +79,6 @@ ul {
 }
 #navbar {
   border:none;
-  height: 60px;
+  height: 57px;
   width: 100%;
 }
