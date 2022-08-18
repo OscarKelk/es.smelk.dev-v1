@@ -9,9 +9,13 @@
     <script>
       window.onload = function(){
         const urlParams = new URLSearchParams(location.search); // Get URL parameters
+        var name = urlParams.get("name"); // Donator name
         const donation_amount = urlParams.get("amount"); // Donation amount
+        if (name == null) {
+          name = "Anonymous";
+        }
         if (donation_amount != null && isNaN(donation_amount) == false && donation_amount != "" && donation_amount > 0) {
-          document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you for your donation of $" + donation_amount + "!";
+          document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you, " + name +", for your donation of $" + donation_amount + "!";
         }
       }
       </script>
