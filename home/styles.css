@@ -66,3 +66,10 @@ ul {
   color: black;
   font-weight: 200;
 }
+h2 {
+  font-family: 'Radio Canada', Sans-serif;
+  font-weight: 600;
+  }
+img {
+  padding: 6px
+}
