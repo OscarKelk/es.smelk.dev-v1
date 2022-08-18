@@ -53,33 +53,25 @@ nav .menuItems a:hover::before {
     float: left;
     display: block;
 }
-#overlay {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  opacity: 0.9;
-  border-radius: 25px 25px 25px 25px;
-  position: absolute;
-  bottom: 16px;
-  left: 8px;
-  right: 0;
-  background-color: #ffffff;
-  overflow: hidden;
-  width: 0;
-  height: 29px;
-  transition: .5s ease;
+
+.nav-logo:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
 }
-.container:hover #overlay {
-    width: 65px;
-    height: 29px
-}
-.overlay {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
 }
