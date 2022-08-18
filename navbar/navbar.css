@@ -1,16 +1,15 @@
 nav {
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 25px;
     display: inline-flex;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 100%;
+    width: 97%;
     top: 0;
-    background-color: #1e2d1d;
+    background-color: #343434;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     align-items: center;
-    padding-bottom: 10px;
     margin: 0;
     position: fixed;
 }
@@ -48,5 +47,6 @@ nav .menuItems a:hover::before {
     transition: all 0.2s ease-in-out;
 }
 nav img {
-    float: right;
+    margin-left: 30px;
+    float: left;
 }
