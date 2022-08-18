@@ -10,7 +10,7 @@
       window.onload = function(){
         const urlParams = new URLSearchParams(location.search); // Get URL parameters
         const donation_amount = urlParams.get("amount"); // Donation amount
-        if (donation_amount != null && isNaN(donation_amount) == false) {
+        if (donation_amount != null && isNaN(donation_amount) == false && donation_amount != "") {
           document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you for your donation of $" + donation_amount + "!";
         }
       }
