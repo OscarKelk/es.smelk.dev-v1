@@ -16,6 +16,8 @@
         }
         if (donation_amount != null && isNaN(donation_amount) == false && donation_amount != "" && donation_amount > 0) {
           document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you, " + name +", for your donation of $" + donation_amount + "!";
+          document.getElementsByClassName("hmessage")[0].innerHTML = "Thank you for supporting us.";
+          document.getElementsByClassName("endmessage")[0].innerHTML = "Thank you f your coninued support of Smelk Innovations.";
         }
       }
       </script>
@@ -23,9 +25,9 @@
   <body>
     <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
-      <h2> Thanks for the dollars </h2>
-      <p class="dmessage">Your donation was not found</p>
-      <p>Thank you for your continued support of Smelk Innovations.<p>
+      <h2 class="hmessage"> That's weird. </h2>
+      <p class="dmessage">Your donation was not found.</p>
+      <p class="endmessage">As one of our customers, our priority at Smelk Innovations is to you. Please try again, if you like.</p>
   </body>
   </div>
 </body>
