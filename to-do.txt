@@ -1,4 +1,0 @@
-1) Save donate data and create a graph
-2) Packages page
-    - Smelk premium gold
-3) What we are working on in the future
