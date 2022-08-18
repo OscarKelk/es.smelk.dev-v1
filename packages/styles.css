@@ -24,12 +24,16 @@ h1 {
 
 h2 {
 font-family: 'Radio Canada', Sans-serif;
-font-weight: 400;
+font-weight: 600;
 }
 
 p{
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 400;
+}
+img {
+  border-radius: 25px 0 25px 25px;
+  margin-bottom: -10px
 }
 
 a {
