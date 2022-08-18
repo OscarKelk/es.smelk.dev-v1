@@ -11,7 +11,7 @@
         const urlParams = new URLSearchParams(location.search); // Get URL parameters
         var name = urlParams.get("name"); // Donator name
         const donation_amount = urlParams.get("amount"); // Donation amount
-        if (name == null) {
+        if (name == null || name == "") {
           name = "Anonymous";
         }
         if (donation_amount != null && isNaN(donation_amount) == false && donation_amount != "" && donation_amount > 0) {
@@ -26,7 +26,6 @@
       <h2> Thanks for the dollars </h2>
       <p class="dmessage">Your donation was not found</p>
       <p>Thank you for your continued support of Smelk Innovations.<p>
-        bar graph?
   </body>
   </div>
 </body>
