@@ -1,7 +1,7 @@
 body{
   background: url(/assets/smelk_suite1.png);
   background-position: bottom 100px;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 
   background-color: #8e5e0b;
