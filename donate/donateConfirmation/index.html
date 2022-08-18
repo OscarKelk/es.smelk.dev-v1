@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<!-- JS for fake donations recieved -->
 <html>
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Radio+Canada:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title> Smelk | Thank you for your donation </title>
     <link rel="icon" type="image/x-icon" href="/assets/logo-coloured.png">
+
+    <script>
+      window.onload = function(){
+        const urlParams = new URLSearchParams(location.search); // Get URL parameters
+        const donation_amount = urlParams.get("amount"); // Donation amount
+        if (donation_amount != null) {
+          document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you for your donation of $" + donation_amount + "!";
+        }
+      }
+      </script>
   </head>
   <body>
-    <iframe style="top: 0px;" src="..//navbar/navbar.html" id="navbar" title="navbar"></iframe>
+    <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
       <h2> Thanks for the dollars </h2>
-      <p>We have so far recieved ${x} thanks to our loyal supporters</p>
+      <p class="dmessage">An error occurred and your donation could not processed. Please try again.</p>
       <p>Thank you for your continued support of Smelk Innovations.<p>
         bar graph?
   </body>
