@@ -11,7 +11,7 @@
   <body>
     <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
 <div id="body">
-  <div>
+  <div style="text-align: center">
     <img src="https://raw.githubusercontent.com/ASkiingrock/Funnyinator/main/assets/logo.png" alt="logo" width="200" height="auto" />
     <a href="https://github.com/ASkiingrock/Funnyinator" target="_blank">
     <h1>"Funnyinator"</h1>
@@ -103,32 +103,45 @@
       <li>The Discord bot requires the requests module to automatically update the words list</li>
     </ul>
 
-    <code class="point">
-      <span class="code">pip install requests</span>
-    </code>
-
+    <div class="codediv">
+    <code>pip install requests</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
+    </div>
 
     <!-- Run Locally -->
     <h3 id="run locally"> Run Locally </h3>
 
     <p class="two">Clone the project</p>
-
-    <code class="normal">
-      <span class="codeN">git clone https://github.com/ASkiingrock/Funnyinator.git</span>
-    </code>
+    <div class="codediv">
+    <code>git clone https://github.com/ASkiingrock/Funnyinator.git</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
+    </div>
 
     <p class="two"> Go to the project directory </p>
 
-    <code class="normal">
-      <span class="codeN">cd funnyinator</span>
-    </code>
-
+    <div class="codediv">
+    <code>cd funnyinator</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
+    </div>
     <p class="two">Run the funnyinator file</p>
 
-    <code class="normal">
-      <span class="codeN">funnyinator.py</span>
-    </code>
-
+    <div class="codediv">
+    <code>funnyinator.py</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
+    </div>
+    <script>
+      function myFunction(text) {
+        navigator.clipboard.writeText(text);
+      }
+    </script>
 
     <!-- Usage -->
     <h2 id="usage"> Usage </h2>
