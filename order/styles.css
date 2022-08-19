@@ -1,0 +1,62 @@
+body{
+    background: url(/assets/smelk_suite3_crop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: #f9f6f2;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#body {
+    margin-top: 81px;
+  }
+
+iframe {
+    position: fixed;
+}
+#navbar {
+    border: none;
+    height: 71px;
+    width: 100%;
+}
+
+div .side {
+    border-radius: 20px 20px 0px 0px;
+    height: 80%;
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Radio Canada', Sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Radio Canada', Sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+p{
+    font-family: 'Radio Canada', Sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, label {
+    font-family: 'Radio Canada', Sans-serif;
+    font-weight: 200;
+}

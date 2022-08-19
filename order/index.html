@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title> Smelk | Place your order </title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo-coloured-notext.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        window.onload = function(){
+          var order_names = {  // Order ids to capitalised names
+            "smelk_suite": "Smelk Suite",
+            "funnyinator": "Funnyinator",
+            "mum_insulter": "Mum Insulter",
+            "text_editor": "Text Editor",
+            "stopwatch": "Stopwatch"
+          }
+
+          const urlParams = new URLSearchParams(location.search); // Get URL parameters
+          const order_item = urlParams.get("order_item"); // Order Item ID
+          if (order_item != null && order_item != "") {
+            document.getElementById("order_h1").innerHTML = "Place your order of the " + order_names[order_item]; // Use name from order_names
+            document.getElementById("order_details_item").innerHTML = "Order Item: " + order_names[order_item]; // Use name from order_names
+          }
+        }
+        function quantityCallback(value) {
+            document.getElementById("order_total").innerHTML = "Order Total: $" + value*97.50;
+        }
+        $(document).ready(function() {  //jquery 😳
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+                }
+            });
+        });
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript.</noscript>
+  </head>
+  <body>
+    <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
+    <div id="body">
+        <h1 id="order_h1">Place your Order</h1>
+        <div class="side">
+            <h2>Order Details</h2>
+            <p id="order_details_item">Order Item: </p>
+            <div style="text-align: center;">
+                <form action="/order/orderConfirmation">
+                    <label for="quantity">Quantity: </label>
+                    <input type="number" id="quantity" name="quantity" placeholder="1" oninput="quantityCallback(this.value)">
+                    <br>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" placeholder="John Smelk">
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="johnsmelk@smelk.dev">
+                    <br>
+                    <label for="address">Ship To: </label>
+                    <input type="text" id="address" name="address" placeholder="1 Smelk Street">
+                    <br>
+                    <p id="order_total">Total: </p>
+                    <br>
+                    <input type="submit" value="Place">
+                </form>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
