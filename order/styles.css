@@ -27,8 +27,8 @@ div .side {
     width: 20%;
     position: fixed;
     bottom: 0;
-    left: 0;
-    background-color: white;
+    left: 1%;
+    background-color: #ffffffa8;
     overflow-x: hidden;
     padding-top: 20px;
     z-index: 1;
