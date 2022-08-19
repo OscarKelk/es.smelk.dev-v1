@@ -73,3 +73,20 @@ nav .menuItems a:hover::before {
         transform: translate3d(2px, 0, 0);
     }
 }
+
+.language-switcher {
+    background: url(C:/Users/oscar/Desktop/Personal/Software/Website/smelk.dev-v1/assets/es.svg);
+    background-repeat: no-repeat;
+
+    float: right;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 110%;
+    white-space: nowrap;
+    width: 40px;
+}
