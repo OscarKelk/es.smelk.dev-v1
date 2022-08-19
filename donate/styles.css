@@ -37,10 +37,15 @@ h1 {
     color: white;
 }
 
-h2, h3 {
+h2 {
 font-family: 'Radio Canada', Sans-serif;
-font-weight: 400;
+font-weight: 600;
 color: white;
+}
+h3 {
+  font-family: 'Radio Canada', Sans-serif;
+  font-weight: 400;
+  color: white;
 }
 
 p{
