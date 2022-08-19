@@ -105,6 +105,9 @@
 
     <div class="codediv">
     <code>pip install requests</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
     </div>
 
     <!-- Run Locally -->
@@ -113,18 +116,32 @@
     <p class="two">Clone the project</p>
     <div class="codediv">
     <code>git clone https://github.com/ASkiingrock/Funnyinator.git</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
     </div>
 
     <p class="two"> Go to the project directory </p>
 
     <div class="codediv">
     <code>cd funnyinator</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
     </div>
     <p class="two">Run the funnyinator file</p>
 
     <div class="codediv">
     <code>funnyinator.py</code>
+    <button onclick="myFunction('cd funnyinator')">
+      Copy
+    </button>
     </div>
+    <script>
+      function myFunction(text) {
+        navigator.clipboard.writeText(text);
+      }
+    </script>
 
     <!-- Usage -->
     <h2 id="usage"> Usage </h2>
