@@ -6,9 +6,9 @@
     <link rel="icon" type="image/x-icon" href="/assets/logo-coloured-notext.png">
     <script>
       function switchLanguage() {
-        var url = window.parent.location.href;
+        var url = window.top.location.href;
         var newUrl = url.replace("https://smelk.dev", "https://es.smelk.dev");
-        window.parent.location = newUrl
+        window.top.location = newUrl;
       }
     </script>
   </head>
