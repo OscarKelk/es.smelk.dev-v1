@@ -21,7 +21,7 @@ iframe {
   }
 h1.blink {
     animation: blinker 1s linear infinite;
-    color: #1c87c9;
+    color: #1d7fbb;
     font-size: 30px;
     font-weight: bold;
     font-family: sans-serif;
@@ -34,11 +34,13 @@ h1.blink {
 h1 {
     font-family: 'Radio Canada', Sans-serif;
     text-align: center;
+    color: white;
 }
 
-h2 {
+h2, h3 {
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 400;
+color: white;
 }
 
 p{
@@ -54,5 +56,6 @@ text-decoration: none;
 ul, label {
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 200;
+color: white;
 }
 
