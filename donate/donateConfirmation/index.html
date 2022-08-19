@@ -9,15 +9,18 @@
     <script>
       window.onload = function(){
         const urlParams = new URLSearchParams(location.search); // Get URL parameters
+        var totalDonations = 0
         var name = urlParams.get("name"); // Donator name
         const donation_amount = urlParams.get("amount"); // Donation amount
         if (name == null || name == "") {
           name = "Anonymous";
         }
-        if (donation_amount != null && isNaN(donation_amount) == false && donation_amount != "" && donation_amount > 0) {
+        if (donation_amount != "" && donation_amount > 0) {
+          totalDonations = parseInt(donation_amount) + totalDonations
           document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you, " + name +", for your donation of $" + donation_amount + "!";
           document.getElementsByClassName("hmessage")[0].innerHTML = "Thank you for supporting us.";
           document.getElementsByClassName("endmessage")[0].innerHTML = "Thank you for your continued support of Smelk Innovations.";
+          document.getElementsByClassName("totaldonations")[0].innerHTML = "So far, our loyal Smelk supporters have donated $" + String(totalDonations) + "to us.";
         }
       }
       </script>
@@ -25,9 +28,13 @@
   <body>
     <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
-      <h2 class="hmessage"> That's weird. </h2>
+      <h2 class="hmessage">That's weird.</h2>
       <p class="dmessage">Your donation was not found.</p>
-      <p class="endmessage">As one of our customers, our priority at Smelk Innovations is to you. Please try again, if you like.</p>
+      <p class="endmessage">As one of our customers, our priority at Smelk Innovations is to you. Please try again.</p>
+      <br>
+      <h2>Your impact on us</h2>
+      <p class="totaldonations">So far, our loyal Smelk supporters have donated $0 to us.</p>
+    </div>
   </body>
-  </div>
+  
 </body>
