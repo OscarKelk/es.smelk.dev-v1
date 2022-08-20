@@ -1,5 +1,5 @@
 body{
-  background-color: #f9f6f2;
+  background-color: #232220;
   margin-top: 0px;
   padding: 0px;
 }
@@ -17,31 +17,8 @@ iframe {
   width: 100%;
 }
 h1 {
-  color: black;
+  color: white;
   font-family: 'Radio Canada', sans-serif;
-}
-.one {
-  color: black;
-  font-family: 'Radio Canada', sans-serif; 
-}
-hr.one {
-  height: 0.5px;
-  background: grey;
-  width: 277px;
-}
-hr.two {
-  border: none;
-  height: 0.5px;
-  background: grey;
-  width: 60%;
-  margin-left: 0px;
-}
-i {
-  color: rgb(34, 34, 34);
-  font-family: 'Radio Canada', sans-serif;
-  font-style: italic;
-  font-size: 16px;
-  font-weight: 200;
 }
 a:link {
   color: blue;
@@ -70,21 +47,21 @@ a:active {
   font-family: 'Radio Canada', sans-serif;
 }
 h2 {
-  color: black;
+  color: white;
   font-family: 'Radio Canada', sans-serif;
   font-weight: 700;
 }
 h3 {
-  color: black;
+  color: white;
   font-family: 'Radio Canada', sans-serif;
   font-weight: 600;
 }
-.two {
-  color: black;
+p {
+  color: white;
   font-family: 'Radio Canada', sans-serif;
 }
 li {
-  color: black;
+  color: white;
   font-family: 'Radio Canada', sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -110,20 +87,18 @@ button {
   background: #365034;
   color: #ffffff;
   cursor: pointer;
-  font-size: 1em;
-  padding: 0.75rem;
+  font-size: 0.75em;
+  padding: 0.55rem;
   border: 0;
   transition: all 0.5s;
   border-radius: 10px;
   width: auto;
-  position: absolute;
-  top: 70px;
-  right: 10px;
+  position: relative;
 }
 .nice-button:hover {
   background: #44a63f;
   transition: all 0.5s;
   border-radius: 15px;
   box-shadow: 0px 6px 15px #00ff2661;
-  padding: 0.75rem 1rem 0.75rem;
+  padding: 0.55rem 0.75rem 0.55rem;
 }
