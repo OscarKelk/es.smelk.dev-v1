@@ -11,21 +11,63 @@ function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
     return choices[index];
 }
-function pickInsults(traits) {
+function pickInsults(traits, exacts) {
+    console.log(exacts)
     insults = {}
+    outputstring = ""
+    if (exacts["name"] != null && exacts["name"] != ""){}
+        outputstring += "Yo mama's name is " + exacts["name"] + ".<br/><br/>"
     $.getJSON("https://raw.githubusercontent.com/ASkiingrock/mom-insulter/main/insults.json", function(insultlist) {
         // for item in traits
         console.log(traits)
         if (traits.length > 0) {
             for (let category in traits) {
-                category = traits[category]
-                console.log(category)
-                insults.category = choose(Object.keys(insultlist[category]));
+                category = traits[category];
+                insults[category] = choose(insultlist[category]);
+            }
+            for (const singleinsult in Object.keys(insults)) {
+                outputstring += "Yo mama so " + Object.keys(insults)[singleinsult] + ", " + insults[Object.keys(insults)[singleinsult]] + "<br/>";
+
+                if ("old" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama is " + exacts["age"] + ", which is over 60, therefore: she old."
+                    outputstring += "<br/>"
+                }
+                if ("short" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama is " + exacts["height"] + ", which is fairly under the average of 1.62m"
+                    outputstring += "<br/>"
+                }
+                if ("fat" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama has a bmi of " + String(parseInt(exacts["bmi"]).toFixed(2)) + ", which classifies her as overweight or obese."
+                    outputstring += "<br/>"
+                }
+                if ("stupid" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama has an iq of " + exacts["iq"] + ", which is fairly below the average of 100 and classifies her as mentally impaired"
+                    outputstring += "<br/>"
+                }
+                if ("ugly" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama is a " + exacts["attractiveness"] + " out of 10. She ugly."
+                    outputstring += "<br/>"
+                }
+                if ("scary" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama is " + exacts["scariness"] + " out of 10 scary. She scary."
+                    outputstring += "<br/>"
+                }
+                if ("poor" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama has a yearly income of $" + exacts["income"] + ", this is less that $60,000 - defined as poor by the Australian governent."
+                    outputstring += "<br/>"
+                }
+                if ("rich" == Object.keys(insults)[singleinsult]){
+                    outputstring += "Yo mama has a yearly income of $" + exacts["income"] + ", which is above $330,000, placing her in the top 20% richest households in Australia."
+                    outputstring += "<br/>"
+                }
+                outputstring += "<br/>"
             }
         } else {
-            insults = "There are no insults to make."
+            outputstring += "There are no insults to make.";
         }
-        console.log(insults)
+        document.getElementById("results").innerHTML = outputstring;
+        document.getElementById("results").style.textAlign = "left";
+
     })
 }
 function insultMother(name, age, height, weight, intelligence, attractiveness, scariness, nationality, income) {
@@ -88,5 +130,5 @@ function insultMother(name, age, height, weight, intelligence, attractiveness, s
     }
     
     document.getElementById("results").innerHTML = mum.traits;
-    pickInsults(mum.traits)
+    pickInsults(mum.traits, mum)
 }
