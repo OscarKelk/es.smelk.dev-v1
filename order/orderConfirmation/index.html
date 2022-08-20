@@ -3,17 +3,69 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
     <title>Smelk | Your order has been placed</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo-coloured-notext.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      window.onload = function(){
+        order_names = {  // Order ids to capitalised names
+            "smelk_suite": "Smelk Suite",
+            "funnyinator": "Funnyinator",
+            "mum_insulter": "Mum Insulter",
+            "text_editor": "Text Editor",
+            "stopwatch": "Stopwatch"
+        }
+        const urlParams = new URLSearchParams(location.search); // Get URL parameters
 
-    <script></script>
+        const order_item = urlParams.get("order_item"); // Order item
+        const quantity = urlParams.get("quantity"); // Order quantity
+        const name = urlParams.get("name");
+        const email = urlParams.get("email");
+        const address = urlParams.get("address");
+
+        const order_item_name = order_names[order_item];
+        const name_titled = name[0].toUpperCase() + name.substring(1);
+        if (order_item != null && quantity != null && name != null && email != null && address != null) {
+          if (order_item != "" && quantity != "" && name != "" && email != "" && address != "") {
+            document.getElementById("order-header").innerHTML = name_titled + ", your order of " + quantity + " " + order_item_name + "(s) has been placed.";
+
+            var rand = Math.random();
+            document.getElementById("business-days").innerHTML = "You should receive your order within " + Math.floor(rand*10) + "-" + Math.floor(rand*15) + " business days";
+            
+            var settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": encodeURI("https://us1.locationiq.com/v1/search?key=pk.1575619b9c4974d7bc4616864aa144f3&q=" + address +"&format=json"), // Yes, I am aware that this a problem. I'm relying on the integrity of our users to not abuse this (and the fact that no one will look in here/understand it)
+              "method": "GET"
+            }
+            $.ajax(settings).done(function (response) {
+              var lat = parseFloat(response[0]["lat"]);
+              var long = parseFloat(response[0]["lon"]);
+              var map = L.map('map').setView([lat, long], 15);
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '© OpenStreetMap'}).addTo(map);
+              var marker = L.marker([lat, long]).addTo(map);
+              marker.bindPopup("Order Address");
+            });
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
-      <h2>Your order has been placed</h2>
-      <p>You should receive your order within 3-5 business days</p>
+      <h2 id="order-header">Your order was not found</h2>
+      <p id="business-days">We cannot deliver your order</p>
       <p>Thank you for your continued support of Smelk Innovations<p>
+      <div id="map"></div>
+    </div>
   </body>
-  </div>
-</body>
+</html>
