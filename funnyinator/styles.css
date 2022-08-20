@@ -105,3 +105,25 @@ button {
   margin-top: 2px;
   float: right;
 }
+.nice-button {
+  font-family: "Radio Canada", sans-serif;
+  background: #365034;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.75rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: absolute;
+  top: 70px;
+  right: 5px;
+}
+.nice-button:hover {
+  background: #44a63f;
+  transition: all 0.5s;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px #00ff2661;
+  padding: 0.75rem 1rem 0.75rem;
+}
