@@ -19,18 +19,16 @@ function makeFunny(input_string) {
           }
 
         var output_string = replaced_string.split(" ");
-        // console.log(output_string.entries());
-        // for (const [word_count, word] in output_string.entries()) {
-        //     console.log(word_count + ", " + word);
-        //     if (Math.random() < 0.04 & word.includes("\n") == false) {
-        //         // Annoyingly long bit of code to pick a random item from array
-        //         var rand = Math.random();
-        //         rand *= words.length;
-        //         rand = Math.floor(rand);
-        //         var funny_word = words[rand];
-        //         output_string[word_count] += " " + funny_word;
-        //     }
-        // }
+        for (const [word_count, word] of output_string.entries()) {
+            if (Math.random() < 0.04 & word.includes("\n") == false) {
+                // Annoyingly long bit of code to pick a random item from array
+                var rand = Math.random();
+                rand *= words["funny_words"].length;
+                rand = Math.floor(rand);
+                var funny_word = words["funny_words"][rand];
+                output_string[word_count] += " " + funny_word;
+            }
+        }
         document.getElementById('text-entry').value = output_string.join(" ");
 });
 }
