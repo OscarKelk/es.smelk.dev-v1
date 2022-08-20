@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet"> 
     <link href="navbar.css" rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="/assets/logo-coloured-notext.png">
+    <script>
+      function switchLanguage() {
+        var url = window.top.location.href;
+        var newUrl = url.replace("https://smelk.dev", "https://es.smelk.dev");
+        window.top.location = newUrl;
+      }
+    </script>
   </head>
   
 <nav> <!--Navbar-->
@@ -16,6 +22,7 @@
     <a target="_parent" href="/about" data-text="About">About</a>
     <a target="_parent" href="/donate" data-text="Donate">Donate</a>
   </ul>
+  <button class="language-switcher" onclick="switchLanguage()">Es</button>
 </nav>
     
 </html>

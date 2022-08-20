@@ -8,7 +8,7 @@ nav {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 98%;
+    width: 99.25%;
     top: 0;
     background-color: #343434df;
     align-items: center;
@@ -72,4 +72,21 @@ nav .menuItems a:hover::before {
     40%, 60% {
         transform: translate3d(2px, 0, 0);
     }
+}
+
+.language-switcher {
+    background: url(/assets/es.svg);
+    background-repeat: no-repeat;
+
+    float: right;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 110%;
+    white-space: nowrap;
+    width: 40px;
 }
