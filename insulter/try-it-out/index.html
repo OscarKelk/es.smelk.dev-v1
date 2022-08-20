@@ -12,7 +12,7 @@
     <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
     <div id="body">
       <div class="formtable">
-        <form action="/insulter/try-it-out">
+        <form action="/insulter/try-it-out" onsubmit="return false;">
             <label for="name">Mum's name: </label>
             <input type="text" id="name" name="name" placeholder="Jane Smelk">
             <br>
@@ -43,6 +43,7 @@
             <input style="margin-top: 10px !important; text-align: center !important; width: 200px !important; margin-left: 195px"class="nice-button" type="submit" value="Generate Insult" onclick="insultMother()">
         </form>
       </div>
+      <p id="results">Your results will appear here.</p>
       <script>
         function insultMother() {
          urlParams = new URLSearchParams(location.search); // Get URL parameters
@@ -59,40 +60,54 @@
           income : urlParams.get('income'),
           traits : []
          }
+         try {
+          mum.bmi = mum.weight / (mum.height * mum.height);
+         }
+         catch(err) {
+         }
+         if (mum.age != null && mum.age > 0 && mum.age != '') {
          if (mum.age > 60){
             mum.traits.push('old')
          }
-         if (mum.height_m < 1.55){
+         } if (mum.height != null && mum.height > 0 && mum.height != '') {
+         if (mum.height < 1.55){
              mum.traits.push('short')
          }
+         } if (mum.bmi != null && mum.bmi > 0 && mum.bmi != '') {
          if (mum.bmi > 25){
              mum.traits.push('fat')
          }
+         } if (mum.iq != null && mum.iq > 0 && mum.iq != '') {
          if (mum.iq < 85){
              mum.traits.push('stupid')
          }
+         } if (mum.attractiveness != null && mum.attractiveness != '') {
          if (mum.attractiveness < 5){
              mum.traits.push('ugly')
          }
+         } if (mum.scariness != null && mum.scariness != '') {
          if (mum.scariness > 6){
              mum.traits.push('scary')
          }
-         if (mum.nationality.toLowerCase() in ["american", "united states", "united states of america", "usa", "us", "america"]){
+         } if (mum.nationality != null && mum.nationality != '') {
+         if (mum.nationality.toLowerCase() == "american" || mum.nationality.toLowerCase() =="united states" || mum.nationality.toLowerCase() =="united states of america" || mum.nationality.toLowerCase() =="usa" || mum.nationality.toLowerCase() =="us" || mum.nationality.toLowerCase() =="america"){
              mum.traits.push('american')
          }
-         if (mum.yearly_income <= 60000){
-             mum.traits.push('poor')
-         }
-         if (mum.yearly_income >= 330000){
-             mum.traits.push('rich')
-         }
-         if (mum.nationality.toLowerCase() in ["french", "france"]){
+         if (mum.nationality.toLowerCase() == "french" || mum.nationality.toLowerCase() =="france"){
              mum.traits.push('french')
          }
-      console.log(mum.traits);
+         } if (mum.income != null && mum.income>0 && mum.income != '') {
+         if (mum.income <= 60000){
+             mum.traits.push('poor')
+         }
+         if (mum.income >= 330000){
+             mum.traits.push('rich')
+         }
+         }
+         
+      document.getElementById("results").innerHTML = mum.traits;
       }
       </script>
-      <p id="results">Your results will appear here.</p>
       <h1>Under construction.</h1>
     </div>
   </body>
