@@ -118,7 +118,7 @@ button {
   width: auto;
   position: absolute;
   top: 70px;
-  right: 5px;
+  right: 10px;
 }
 .nice-button:hover {
   background: #44a63f;
