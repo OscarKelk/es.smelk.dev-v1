@@ -1,3 +1,33 @@
+// Load jQuery
+window.onload = function() {
+    if (typeof jQuery === "undefined") {
+        var script = document.createElement("script");
+        script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
+        script.type = "text/javascript";
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+}
+function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+}
+function pickInsults(traits) {
+    insults = {}
+    $.getJSON("https://raw.githubusercontent.com/ASkiingrock/mom-insulter/main/insults.json", function(insultlist) {
+        // for item in traits
+        console.log(traits)
+        if (traits.length > 0) {
+            for (let category in traits) {
+                category = traits[category]
+                console.log(category)
+                insults.category = choose(Object.keys(insultlist[category]));
+            }
+        } else {
+            insults = "There are no insults to make."
+        }
+        console.log(insults)
+    })
+}
 function insultMother(name, age, height, weight, intelligence, attractiveness, scariness, nationality, income) {
     mum = {
      name : name,
@@ -19,7 +49,6 @@ function insultMother(name, age, height, weight, intelligence, attractiveness, s
     }
     if (mum.age != null && mum.age > 0 && mum.age != '') {
     if (mum.age > 60){
-        console.log('hi');
        mum.traits.push('old');
     }
     } if (mum.height != null && mum.height > 0 && mum.height != '') {
@@ -59,4 +88,5 @@ function insultMother(name, age, height, weight, intelligence, attractiveness, s
     }
     
     document.getElementById("results").innerHTML = mum.traits;
+    pickInsults(mum.traits)
 }
