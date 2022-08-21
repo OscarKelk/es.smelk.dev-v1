@@ -30,11 +30,11 @@ function pickInsults(traits, exacts) {
                 outputstring += "Yo mama so " + Object.keys(insults)[singleinsult] + ", " + insults[Object.keys(insults)[singleinsult]] + "\n";
 
                 if ("old" == Object.keys(insults)[singleinsult]){
-                    outputstring += "Yo mama is " + exacts["age"] + ", which is over 60, therefore: she is old."
+                    outputstring += "Yo mama is " + exacts["age"] + "years old, which is over 60, therefore: she is old."
                     outputstring += "\n"
                 }
                 if ("short" == Object.keys(insults)[singleinsult]){
-                    outputstring += "Yo mama is " + exacts["height"] + ", which is fairly under the average of 1.62m"
+                    outputstring += "Yo mama is " + exacts["height"] + "m, which is fairly under the average of 1.62m"
                     outputstring += "\n"
                 }
                 if ("fat" == Object.keys(insults)[singleinsult]){
@@ -50,7 +50,7 @@ function pickInsults(traits, exacts) {
                     outputstring += "\n"
                 }
                 if ("scary" == Object.keys(insults)[singleinsult]){
-                    outputstring += "Yo mama is " + exacts["scariness"] + " out of 10 scary. She scary."
+                    outputstring += "Yo mama is " + exacts["scariness"] + " out of 10 in scariness. She scary."
                     outputstring += "\n"
                 }
                 if ("poor" == Object.keys(insults)[singleinsult]){
