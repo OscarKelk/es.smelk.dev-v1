@@ -21,20 +21,21 @@
           if (order_item != null && order_item != "") {
             document.getElementById("order_h1").innerHTML = "Place your order of the " + order_names[order_item][0]; // Use name from order_names
             document.getElementById("order_details_item").innerHTML = "Order Item: " + order_names[order_item][0]; // Use name from order_names
+            document.getElementById("order-item-passthrough").value = order_item; // Pass order_item through to confirmation query string
           }
-          }
-          function quantityCallback(value) {
-            var multiplier = order_names[order_item][1];
-            document.getElementById("order_total").innerHTML = "Order Total: $" + value*multiplier;
-          }
-          $(document).ready(function() {  //jquery 😳
-              $(window).keydown(function(event){
-                  if(event.keyCode == 13) {
-                  event.preventDefault();
-                  return false;
-                  }
-              });
-          });
+        }
+        function quantityCallback(value) {
+          var multiplier = order_names[order_item][1];
+          document.getElementById("order-total").innerHTML = "Order Total: $" + value*multiplier;
+        }
+        $(document).ready(function() {  //jquery 😳
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+                }
+            });
+        });
     </script>
     <noscript>Sorry, your browser does not support JavaScript.</noscript>
   </head>
@@ -47,6 +48,8 @@
             <p id="order_details_item">Order Item: </p>
             <div style="text-align: center;">
                 <form action="/order/orderConfirmation">
+                    <input id="order-item-passthrough" type="hidden" name="order_item" value="order_item">
+
                     <label for="quantity">Quantity: </label>
                     <input type="number" id="quantity" name="quantity" placeholder="1" oninput="quantityCallback(this.value)">
                     <br>
@@ -59,9 +62,9 @@
                     <label for="address">Ship To: </label>
                     <input type="text" id="address" name="address" placeholder="1 Smelk Street">
                     <br>
-                    <p id="order_total">Total: </p>
+                    <p id="order-total">Total: </p>
                     <br>
-                    <input type="submit" value="Place">
+                    <input class="nice-button" type="submit" value="Place">
                 </form>
             </div>
         </div>

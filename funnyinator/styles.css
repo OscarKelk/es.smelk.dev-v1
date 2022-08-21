@@ -3,7 +3,9 @@ body{
   margin-top: 0px;
   padding: 0px;
 }
-
+.body {
+  text-align: center;
+}
 #body {
   margin-top: 71px;
 }
