@@ -12,10 +12,7 @@
 <body>
   <iframe style="top: 0px" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
 <div id="body">
-<form style="position: absolute; top: 70px; right: 10px;" action="/order/">
-  <input type="hidden" name="order_item" value="mum_insulter">
-  <input class="nice-button" type="submit" value="Order Now!"/>
-</form>
+
 <!-- why you looking in the html???? huh???? -->
 <h1>Hello!</h1>
 <p>This is the website for the (highly intelligent) mum insulter.</p>
@@ -36,9 +33,15 @@ This highly intelligent code is licenced under <code>CC BY-NC-ND 4.0</code>, we 
 </p>
 <h4>How can I use this in my own projects?</h4>
 <p>The Mum class has two methods, <code>insult()</code> and <code>fact()</code>. You can imagine what these are, I doubt further explanation is required.<br></p>
-<h4>Will you be selling this product?</h4>
-<p>Currently, this is under discussion;</p>
-<p>We believe that releasing a product like this for a monetary price would ultimately crash the global economy and we can’t live with the guilt of that.</p>
+<div id="orderbutton">
+<h4 class="child">Will you be selling this product?</h4>
+  <form class="child" style="margin-left: 10px;"action="/order/">
+    <input type="hidden" name="order_item" value="mum_insulter">
+    <input class="nice-button" type="submit" value="Order Now!"/>
+  </form>
+</div>
+<p>Yes.</p>
+<p>We believe that releasing a product like for free would be giving up a golden opportunity to steal your money. The Mum Insulter is available from $35.95 for a limited time only.</p>
 <form style="text-align: center;" action="/insulter/try-it-out/">
   <input class="nice-button" type="submit" value="Try it out" />
 </form>
