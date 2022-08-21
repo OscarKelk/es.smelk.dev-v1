@@ -92,27 +92,6 @@ p, label, input {
   box-shadow: 0px 6px 15px #00ff2661;
   padding: 0.75rem 1rem 0.75rem;
 }
-
-.formtable{
-  width: 580px;
-  height: 300px;
-  position: relative;
-  left: 50%; 
-  transform: translateX(-50%);
-}
-.formtable label{
-  float:left;
-  width:190px;
-  text-align:left;
-  margin-right:5px;
-  clear: left
-}
-.formtable input {
-  float:left;
-  width:65%;
-  clear: right;
-  text-align: left
-}
 ul {
   font-family: 'Radio Canada', sans-serif;
   font-size: 16px;
@@ -121,4 +100,7 @@ ul {
 }
 img {
   padding: 6px
+}
+#results {
+  font-family: 'Radio Canada', sans-serif
 }

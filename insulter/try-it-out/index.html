@@ -9,43 +9,73 @@
   </head>
   
   <body>
-    <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
+    <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" titde="navbar"></iframe> 
     <div id="body">
-      <div class="formtable">
-        <script type="text/javascript" src="mum-insulter.js"></script>
+      <script type="text/javascript" src="mum-insulter.js"></script>
+      <table align="center">
         <form action="/insulter/try-it-out" onsubmit="return false;">
-            <label for="name">Mum's name: </label>
-            <input type="text" id="name" name="name" placeholder="Jane Smelk">
-            <br>
-            <label for="age">Age: </label>
-            <input type="number" id="age" name="age" placeholder="50">
-            <br>
-            <label for="height">Height (metres): </label>
-            <input type="float" id="height" name="height" placeholder="1.60">
-            <br>
-            <label for="weight">Weight (kg): </label>
-            <input type="number" id="weight" name="weight" placeholder="175">
-            <br>
-            <label for="intelligence">Intelligence (IQ): </label>
-            <input type="number" id="intelligence" name="intelligence" placeholder="100">
-            <br>
-            <label for="attractiveness">Attractiveness (1-10): </label>
-            <input type="number" min="0" max ="10" id="attractiveness" name="attractiveness" placeholder="5">
-            <br>
-            <label for="scariness">Scariness (1-10): </label>
-            <input type="number" min="0" max="10" id="scariness" name="scariness" placeholder="5">
-            <br>
-            <label for="nationality">Nationality: </label>
-            <input type="text" id="nationality" name="nationality" placeholder="Australian">
-            <br>
-            <label for="income">Yearly Income ($AUD): </label>
-            <input type="number" id="income" name="income" placeholder="51000">
-            <br>
-            <input style="margin-top: 10px !important; text-align: center !important; width: 200px !important; margin-left: 195px"class="nice-button" type="submit" value="Generate Insult" onclick="insultMother((document.getElementById('name').value),(document.getElementById('age').value),(document.getElementById('height').value),(document.getElementById('weight').value),(document.getElementById('intelligence').value),(document.getElementById('attractiveness').value),(document.getElementById('scariness').value),(document.getElementById('nationality').value),(document.getElementById('income').value))">
+          <tr>
+            <td>
+              <label for="name">Mum's name: </label>
+              </td><td><input type="text" id="name" name="name" placeholder="Jane Smelk"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="age">Age: </label>
+              </td><td><input type="number" id="age" name="age" placeholder="50"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="height">Height (metres): </label>
+              </td><td><input type="float" id="height" name="height" placeholder="1.60"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="weight">Weight (kg): </label>
+              </td><td><input type="number" id="weight" name="weight" placeholder="175"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="intelligence">Intelligence (IQ): </label>
+              </td><td><input type="number" id="intelligence" name="intelligence" placeholder="100"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="attractiveness">Attractiveness (1-10): </label>
+              </td><td><input type="number" min="0" max ="10" id="attractiveness" name="attractiveness" placeholder="5"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="scariness">Scariness (1-10): </label>
+              </td><td><input type="number" min="0" max="10" id="scariness" name="scariness" placeholder="5"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="nationality">Nationality: </label>
+              </td><td><input type="text" id="nationality" name="nationality" placeholder="Australian"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="income">Yearly Income ($AUD): </label>
+              </td><td><input type="number" id="income" name="income" placeholder="51000"/>
+            </td>
+          </tr>
+          <tr>
+          <td colspan="2"><input style="left: 31%; margin-top: 7px" class="nice-button" type="submit" value="Generate Insult" onclick="insultMother((document.getElementById('name').value),(document.getElementById('age').value),(document.getElementById('height').value),(document.getElementById('weight').value),(document.getElementById('intelligence').value),(document.getElementById('attractiveness').value),(document.getElementById('scariness').value),(document.getElementById('nationality').value),(document.getElementById('income').value))"></td>
+          </tr>
         </form>
+      </table>
+      <div align="center" class="results-container">
+      <textarea style="margin-top: 10px" id="results" name="results" rows="15" cols="100" placeholder="Your results will appear here"></textarea>
       </div>
-      <p id="results">Your results will appear here.</p>
-      <h1>Under construction.</h1>
     </div>
   </body>
 </html>

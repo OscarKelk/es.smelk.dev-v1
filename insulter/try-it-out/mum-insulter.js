@@ -12,11 +12,12 @@ function choose(choices) {
     return choices[index];
 }
 function pickInsults(traits, exacts) {
-    console.log(exacts)
+    console.log(exacts["name"].length)
     insults = {}
     outputstring = ""
-    if (exacts["name"] != null && exacts["name"] != ""){}
-        outputstring += "Yo mama's name is " + exacts["name"] + ".<br/><br/>"
+    if (exacts["name"].length != 0){
+        outputstring += "Yo mama's name is " + exacts["name"] + ".\n\n"
+    }
     $.getJSON("https://raw.githubusercontent.com/ASkiingrock/mom-insulter/main/insults.json", function(insultlist) {
         // for item in traits
         console.log(traits)
@@ -26,47 +27,46 @@ function pickInsults(traits, exacts) {
                 insults[category] = choose(insultlist[category]);
             }
             for (const singleinsult in Object.keys(insults)) {
-                outputstring += "Yo mama so " + Object.keys(insults)[singleinsult] + ", " + insults[Object.keys(insults)[singleinsult]] + "<br/>";
+                outputstring += "Yo mama so " + Object.keys(insults)[singleinsult] + ", " + insults[Object.keys(insults)[singleinsult]] + "\n";
 
                 if ("old" == Object.keys(insults)[singleinsult]){
-                    outputstring += "Yo mama is " + exacts["age"] + ", which is over 60, therefore: she old."
-                    outputstring += "<br/>"
+                    outputstring += "Yo mama is " + exacts["age"] + ", which is over 60, therefore: she is old."
+                    outputstring += "\n"
                 }
                 if ("short" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama is " + exacts["height"] + ", which is fairly under the average of 1.62m"
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
                 if ("fat" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama has a bmi of " + String(parseInt(exacts["bmi"]).toFixed(2)) + ", which classifies her as overweight or obese."
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
                 if ("stupid" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama has an iq of " + exacts["iq"] + ", which is fairly below the average of 100 and classifies her as mentally impaired"
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
                 if ("ugly" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama is a " + exacts["attractiveness"] + " out of 10. She ugly."
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
                 if ("scary" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama is " + exacts["scariness"] + " out of 10 scary. She scary."
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
                 if ("poor" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama has a yearly income of $" + exacts["income"] + ", this is less that $60,000 - defined as poor by the Australian governent."
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
                 if ("rich" == Object.keys(insults)[singleinsult]){
                     outputstring += "Yo mama has a yearly income of $" + exacts["income"] + ", which is above $330,000, placing her in the top 20% richest households in Australia."
-                    outputstring += "<br/>"
+                    outputstring += "\n"
                 }
-                outputstring += "<br/>"
+                outputstring += "\n"
             }
         } else {
             outputstring += "There are no insults to make.";
         }
-        document.getElementById("results").innerHTML = outputstring;
-        document.getElementById("results").style.textAlign = "left";
+        document.getElementById("results").value = outputstring;
 
     })
 }
