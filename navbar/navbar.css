@@ -75,7 +75,7 @@ nav .menuItems a:hover::before {
 }
 
 .language-switcher {
-    background: url(/assets/es.svg);
+    background: url(/assets/flags/es.svg);
     background-repeat: no-repeat;
 
     float: right;
