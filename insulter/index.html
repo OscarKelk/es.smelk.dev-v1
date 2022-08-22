@@ -10,15 +10,23 @@
     <link rel="icon" type="image/x-icon" href="/assets/logo-coloured-notext.png">
 </head>
 <body>
-  <iframe style="top: 0px" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
-< id="body">
+  <div id="body">
+  <iframe style="top: 0px; z-index:1" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
 
+<div class="info">
 <!-- why you looking in the html???? huh???? -->
 <h1>Mum Insulter</h1>
-<p style="text-align: center"><i>Insulting female parental figures has never been easier</i></p>
-<h4>Details</h4>
+<p style="text-align: center;"><i>Insulting female parental figures has never been easier</i></p>
+<div style="text-align: center">
+  <img class="rounded" src="/assets/insulter_award1.png" width="150" alt="Nobel Prize"/>
+  <img class="rounded" src="/assets/insulter_award2.png" width="150" alt="Pullitzer Prize"/>
+  <img class="rounded" src="/assets/insulter_award3.png" width="150" alt="Fields Medal"/>
+  <img class="rounded" src="/assets/insulter_award4.png" width="150" alt="Best Screenplay"/>
+  <hr/>
+</div>
+<h2>Details</h2>
 <p><a href="https://en.wikipedia.org/wiki/Maternal_insult">Yo Mama Jokes</a> are jokes that are designed to insult your mother. This particular project aims to streamline that process, so that your ability to produce humourous quips is more efficient than ever. Simply input as many details about your (or someone else's) mother, and let us do the hard work for you.</p>
-<h4>How does it work?</h4>
+<h3>How does it work?</h3>
 <p>
 If you aren’t planning on stealing this highly intelligent wisdom, it is no trouble to share with you the inner workings.</p>
 
@@ -28,29 +36,93 @@ If you aren’t planning on stealing this highly intelligent wisdom, it is no tr
 
 <p>Third, it tells you a very insulting fact about your mother.</p>
 </p>
-<h3>FAQ</h3>
-<h4>Code licence</h4>
+<h2>FAQ</h2>
+<h3>Code licence</h3>
 <p>
 This highly intelligent code is licenced under <code>CC BY-NC-ND 4.0</code>, we hope you understand that such prestigious code is valuable.<br>
 </p>
-<h4>How can I use this in my own projects?</h4>
+<h3>How can I use this in my own projects?</h3>
 <p>The Mum class has two methods, <code>insult()</code> and <code>fact()</code>. You can imagine what these are, I doubt further explanation is required.<br></p>
-<div id="orderbutton">
-<h4 class="child">How can I purchase this amazing product?</h4>
-  <form class="child" style="margin-left: 10px;"action="/order/">
-    <input type="hidden" name="order_item" value="mum_insulter">
-    <input class="nice-button" type="submit" value="Order Now!"/>
-  </form>
-</div>
+<h3 class="child">How can I purchase this amazing product?</h3>
 <p>We believe that access to affordable and effective comedic devices is a human right. The Mum Insulter is available for the low, low price of <b>$35.95</b> for a limited time only.</p>
-<h3>Running</h3>
-<p>The Mum Insulter is available to run using <a style="text-decoration: none;" href="https://github.com/Askiingrock/mom-insulter">Python 3.6</a>, or you can try it out in JavaScript in the link below.</p>
-<p style="text-align: center;"><i>Read more at <a href="https://github.com/ASkiingrock/mom-insulter">Github</a></i></p>
-<form style="text-align: center;" action="/insulter/try-it-out/">
-  <input class="nice-button" type="submit" value="Try it out" />
+<form class="child" style="margin-left: 10px; text-align:center;"action="/order/">
+  <input type="hidden" name="order_item" value="mum_insulter">
+  <input class="nice-button" type="submit" value="Order Now!"/>
 </form>
-<br>
-
+<h2>Running</h2>
+<p>The Mum Insulter is available to run using <a style="text-decoration: none;" href="https://github.com/Askiingrock/mom-insulter">Python 3.6</a>, or you can try it out in JavaScript in the link below.</p>
+<p><i>Read more at <a href="https://github.com/ASkiingrock/mom-insulter">Github</a></i></p>
 </div>
+</div>
+<div class="try">
+  <div class="tryheader">
+    <h1 style="padding-top:8px">Try it out</h1>
+    <script type="text/javascript" src="mum-insulter.js"></script>
+    <table style="margin-left: auto; margin-right: auto;">
+      <form action="/insulter/try-it-out" onsubmit="return false;">
+        <tr>
+          <td>
+            <label for="name">Mum's name: </label>
+            </td><td><input type="text" id="name" name="name" placeholder="Jane Smelk"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="age">Age: </label>
+            </td><td><input type="number" id="age" name="age" placeholder="50"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="height">Height (metres): </label>
+            </td><td><input type="float" id="height" name="height" placeholder="1.60"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="weight">Weight (kg): </label>
+            </td><td><input type="number" id="weight" name="weight" placeholder="175"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="intelligence">Intelligence (IQ): </label>
+            </td><td><input type="number" id="intelligence" name="intelligence" placeholder="100"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="attractiveness">Attractiveness (1-10): </label>
+            </td><td><input type="number" min="0" max ="10" id="attractiveness" name="attractiveness" placeholder="5"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="scariness">Scariness (1-10): </label>
+            </td><td><input type="number" min="0" max="10" id="scariness" name="scariness" placeholder="5"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="nationality">Nationality: </label>
+            </td><td><input type="text" id="nationality" name="nationality" placeholder="Australian"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="income">Yearly Income ($AUD): </label>
+            </td><td><input type="number" id="income" name="income" placeholder="51000"/>
+          </td>
+        </tr>
+        <tr>
+        <td colspan="2"><input style="left:50%; -ms-transform: translateX(-50%); transform:translateX(-50%); margin-top: 7px" class="nice-button" type="submit" value="Generate Insult" onclick="insultMother((document.getElementById('name').value),(document.getElementById('age').value),(document.getElementById('height').value),(document.getElementById('weight').value),(document.getElementById('intelligence').value),(document.getElementById('attractiveness').value),(document.getElementById('scariness').value),(document.getElementById('nationality').value),(document.getElementById('income').value))"></td>
+        </tr>
+      </form>
+    </table>
+  
+  <textarea id="results" name="results" rows="15" cols="80" placeholder="Your results will appear here"></textarea>
+  </div>
+</div>
+
 </body>
 </html>
