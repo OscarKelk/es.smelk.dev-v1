@@ -82,11 +82,12 @@ input {
   font-weight: 400;
   color: #000000;
   text-align: center;
+  width: 210px
 }
 
 .nice-button {
   font-family: "Radio Canada", sans-serif;
-  background: #365034;
+  background: #445a42;
   color: #000000;
   cursor: pointer;
   font-size: 1em;
