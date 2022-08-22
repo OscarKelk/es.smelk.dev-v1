@@ -30,7 +30,7 @@ function pickInsults(traits, exacts) {
                 outputstring += "Yo mama so " + Object.keys(insults)[singleinsult] + ", " + insults[Object.keys(insults)[singleinsult]] + "\n";
 
                 if ("old" == Object.keys(insults)[singleinsult]){
-                    outputstring += "Yo mama is " + exacts["age"] + "years old, which is over 60, therefore: she is old."
+                    outputstring += "Yo mama is " + exacts["age"] + " years old, which is over 60, therefore: she is old."
                     outputstring += "\n"
                 }
                 if ("short" == Object.keys(insults)[singleinsult]){
