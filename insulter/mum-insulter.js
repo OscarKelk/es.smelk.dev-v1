@@ -12,7 +12,6 @@ function choose(choices) {
     return choices[index];
 }
 function pickInsults(traits, exacts) {
-    console.log(exacts["name"].length)
     insults = {}
     outputstring = ""
     if (exacts["name"].length != 0){
@@ -20,7 +19,6 @@ function pickInsults(traits, exacts) {
     }
     $.getJSON("https://raw.githubusercontent.com/ASkiingrock/mom-insulter/main/insults.json", function(insultlist) {
         // for item in traits
-        console.log(traits)
         if (traits.length > 0) {
             for (let category in traits) {
                 category = traits[category];
@@ -64,7 +62,10 @@ function pickInsults(traits, exacts) {
                 outputstring += "\n"
             }
         } else {
-            outputstring += "There are no insults to make.";
+            outputstring += "Yo mama so average, we don't have any jokes. Here's a random one instead.\n\n";
+            category = choose(["stupid", "fat", "short", "ugly", "scary", "rich", "poor"])
+            outputstring += "Yo mama so " + category + ", " + choose(insultlist[category])
+
         }
         document.getElementById("results").value = outputstring;
 
