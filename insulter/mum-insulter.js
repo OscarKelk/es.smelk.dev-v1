@@ -62,7 +62,9 @@ function pickInsults(traits, exacts) {
                 outputstring += "\n"
             }
         } else {
-            outputstring += "Yo mama so average, we don't have any jokes. Here's a random one instead.\n\n";
+            if (exacts["void"] == "False") {
+                outputstring += "Yo mama so average, we don't have any jokes. Here's a random one instead.\n\n";
+            }
             category = choose(["stupid", "fat", "short", "ugly", "scary", "rich", "poor"])
             outputstring += "Yo mama so " + category + ", " + choose(insultlist[category])
 
@@ -73,6 +75,7 @@ function pickInsults(traits, exacts) {
 }
 function insultMother(name, age, height, weight, intelligence, attractiveness, scariness, nationality, income) {
     mum = {
+     void: "False",
      name : name,
      age : age,
      height : height,
@@ -84,6 +87,9 @@ function insultMother(name, age, height, weight, intelligence, attractiveness, s
      nationality : nationality,
      income : income,
      traits : []
+    }
+    if (age == '' &&  height == '' &&  weight == '' &&  intelligence == '' &&  attractiveness == '' &&  scariness == '' &&  nationality == '' &&  income == '') {
+        mum.void = "True"
     }
     try {
      mum.bmi = mum.weight / (mum.height * mum.height);
