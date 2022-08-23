@@ -32,7 +32,7 @@ iframe {
 }
 
 a:link {
-  color: blue;
+  color: lightblue;
   text-decoration: none;
   font-family: 'Radio Canada', sans-serif;
 }
@@ -40,7 +40,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: purple;
+  color: pink;
   text-decoration: none;
   font-family: 'Radio Canada', sans-serif;
 }

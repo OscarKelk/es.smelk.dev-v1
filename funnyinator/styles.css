@@ -23,14 +23,14 @@ h1 {
   font-family: 'Radio Canada', sans-serif;
 }
 a:link {
-  color: blue;
+  color: lightblue;
   text-decoration: none;
   font-family: 'Radio Canada', sans-serif;
 }
 
 /* visited link */
 a:visited {
-  color: purple;
+  color: pink;
   text-decoration: none;
   font-family: 'Radio Canada', sans-serif;
 }
@@ -108,4 +108,7 @@ textarea {
   font-family: 'Radio Canada', sans-serif;
   background:#ffffff3e; 
   color: white; 
+}
+textarea::placeholder {
+  color: white
 }
