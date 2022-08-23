@@ -5,8 +5,11 @@ body{
 }
 
 #body {
-    margin-top: 81px;
-  }
+  margin-top: 81px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 iframe {
     position: fixed;
@@ -39,4 +42,24 @@ text-decoration: none;
 ul, label {
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 200;
+}
+.nice-button {
+  font-family: "Radio Canada", sans-serif;
+  background: #365034;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.75em;
+  padding: 0.55rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+}
+.nice-button:hover {
+  background: #44a63f;
+  transition: all 0.5s;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px #00ff2661;
+  padding: 0.55rem 0.75rem 0.55rem;
 }

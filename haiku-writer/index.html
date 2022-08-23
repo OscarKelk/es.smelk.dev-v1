@@ -10,8 +10,15 @@
   
   <body>
     <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
-    <div id="body">
+    <div id="body" align="center" style="width:250px">
       <h1>Haiku Writer</h1>
+      <h2 id="text-title">Title</h2>
+      <p id="text-output" style="text-align: left">Poem<br/><br/><br/></p>
+      <p id="text-author" style="font-style: italic">- Author</p>
+      <script type="text/javascript" src="haikuwriter.js"></script> 
+      <form onsubmit="return false;">
+        <input class="nice-button" type="submit" onclick="writeHaiku()" value="Generate Haiku">
+      </form>
     </div>
   </body>
 </html>
