@@ -21,7 +21,7 @@ iframe {
   }
 h1.blink {
     animation: blinker 1s linear infinite;
-    color: #1d7fbb;
+    color: red;
     font-size: 30px;
     font-weight: bold;
     font-family: sans-serif;
