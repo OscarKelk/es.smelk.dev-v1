@@ -11,9 +11,17 @@
   
   <body>
     <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
-    <div id="body" align="center" style="width:300px">
+    <div id="body" style="text-align:center" style="width:300px">
       <h1>Haiku Writer</h1>
-      <br/><br/><br/>
+      <h2 style="font-style: italic; font-size:25px">Deep on demand</h2>
+    </div>
+    <div>
+      <p style="font-size:18px">Perhaps out most useful product yet, the Smelk Haiku Writer is an assured way to get your english homework done with little stress. Our patented haiku writing technology generates a syllable pattern for each line, then uses our official Smelk wordlist to combine words into a cohesive masterpiece, which provides a deep insight into the world we live in. In case this haiku needs to be attributed, we also included an author and date generator for your convenience.</p>
+      <p style="font-size:18px">To run it, use Python 3.10, or try this version, straight in your browser.</p>
+      <p style="font-size:18px"><i>Read more at <a href="https://www.github.com/askiingrock/haiku-writer">GitHub</a>.</i></p>
+    </div>
+    <div id="generator" style="text-align:center;width:300px">
+      <br/><hr/>
       <h2 id="text-title">[Title]</h2>
       <p id="text-output" style="text-align: left; white-space:nowrap;">[Poem]<br/><br/><br/></p>
       <p id="text-author" style="font-style: italic">- [Author, date]</p>
@@ -21,8 +29,9 @@
       <form onsubmit="return false;">
         <input class="nice-button" type="submit" onclick="writeHaiku()" value="Generate Haiku">
       </form>
+      <br/>
     </div>
-    <p style="font-size:10px; font-style:italics; position:fixed; bottom: 0px">Disclaimer: Since we didn't want to spend unreasonable man-hours writing down syllable counts for 3,000 words, we used a python library. Now, syllapy is not perfect, and nor does it pretend to be. But it's all that we have. If you find a line with an incorrect number of syllables, please find it in your heart to forgive us. We're doing the best we can with what we have.</p>
+    <p style="font-size:10px; font-style:italics; bottom: 0px">Disclaimer: Since we didn't want to spend unreasonable man-hours writing down syllable counts for 3,000 words, we used a python library. Now, syllapy is not perfect, and nor does it pretend to be. But it's all that we have. If you find a line with an incorrect number of syllables, please find it in your heart to forgive us. We're doing the best we can with what we have.</p>
     
   </body>
 </html>
