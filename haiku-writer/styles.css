@@ -1,5 +1,9 @@
 body{
-    background-color: #f9f6f2;
+    background: url(https://www.maxpixel.net/static/photo/1x/Texture-Old-Template-Writing-Background-Paper-2500380.jpg);
+    background-position: bottom 100px;
+    background-repeat: repeat;
+    background-size: cover;
+    
     margin-top: 0px;
     padding: 0px;
 }
