@@ -1,5 +1,5 @@
 window.onload = function() {
-    // writeHaiku();
+    writeHaiku();
 }
 function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
