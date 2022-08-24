@@ -45,7 +45,6 @@ function writeHaiku() {
             }
             
         }
-        console.log(secondline)
         for(let x in firstline){
             firstline_words.push(choose(words[String(firstline[x])]))
         }
