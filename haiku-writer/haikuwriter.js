@@ -5,6 +5,7 @@ window.onload = function() {
         script.type = "text/javascript";
         document.getElementsByTagName("head")[0].appendChild(script);
     }
+    writeHaiku();
 }
 
 function choose(choices) {
