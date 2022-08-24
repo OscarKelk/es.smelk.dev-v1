@@ -27,16 +27,19 @@ iframe {
 h1 {
     font-family: 'Radio Canada', Sans-serif;
     text-align: center;
+    font-size: 50px;
 }
 
 h2 {
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 400;
+font-size: 35px
 }
 
 p{
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 400;
+font-size: 20px
 }
 
 a {

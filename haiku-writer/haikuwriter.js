@@ -54,7 +54,7 @@ function writeHaiku() {
         let title = choose(words[choose(Object.keys(words))])
         title = title.charAt(0).toUpperCase() + title.slice(1);
 
-        document.getElementById('text-title').innerHTML = title
+        document.getElementById('text-title').innerHTML = "'" + title + "'"
     });
     $.getJSON("https://raw.githubusercontent.com/ASkiingrock/haiku-writer/main/haiku%20writer/firstnames.json", function(firstnames) {
         personname += choose(firstnames["firstnames"]) + " "
