@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <title>Smelk Innovations</title>
@@ -12,9 +13,9 @@
     <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
     <div id="body" align="center" style="width:250px">
       <h1>Haiku Writer</h1>
-      <h2 id="text-title">Title</h2>
-      <p id="text-output" style="text-align: left; white-space:nowrap;">Poem<br/><br/><br/></p>
-      <p id="text-author" style="font-style: italic">- Author</p>
+      <h2 id="text-title">[Title]</h2>
+      <p id="text-output" style="text-align: left; white-space:nowrap;">[Poem]<br/><br/><br/></p>
+      <p id="text-author" style="font-style: italic">- [Author, date]</p>
       <script type="text/javascript" src="haikuwriter.js"></script> 
       <form onsubmit="return false;">
         <input class="nice-button" type="submit" onclick="writeHaiku()" value="Generate Haiku">

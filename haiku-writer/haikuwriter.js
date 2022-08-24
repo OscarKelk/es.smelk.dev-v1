@@ -1,13 +1,6 @@
 window.onload = function() {
-    if (typeof jQuery === "undefined") {
-        var script = document.createElement("script");
-        script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
-        script.type = "text/javascript";
-        document.getElementsByTagName("head")[0].appendChild(script);
-    }
     writeHaiku();
 }
-
 function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
     return choices[index];
