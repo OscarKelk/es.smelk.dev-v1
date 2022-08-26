@@ -1,0 +1,42 @@
+body{
+    background-color: #f9f6f2;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#body {
+    margin-top: 81px;
+  }
+
+iframe {
+    position: fixed;
+}
+#navbar {
+    border: none;
+    height: 71px;
+    width: 100%;
+  }
+
+h1 {
+    font-family: 'Radio Canada', Sans-serif;
+    text-align: center;
+}
+
+h2 {
+font-family: 'Radio Canada', Sans-serif;
+font-weight: 400;
+}
+
+p{
+font-family: 'Radio Canada', Sans-serif;
+font-weight: 400;
+}
+
+a {
+text-decoration: none;
+}
+
+ul, label {
+font-family: 'Radio Canada', Sans-serif;
+font-weight: 200;
+}
