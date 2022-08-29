@@ -56,12 +56,19 @@ function writeHaiku() {
 
         document.getElementById('text-title').innerHTML = "'" + title + "'"
     });
-    $.getJSON("https://raw.githubusercontent.com/ASkiingrock/haiku-writer/main/haiku%20writer/firstnames.json", function(firstnames) {
-        personname += choose(firstnames["firstnames"]) + " "
+    fetch('https://raw.githubusercontent.com/ASkiingrock/haiku-writer/main/haiku%20writer/firstnamesv2.txt')
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+    personname += choose(data.split("\n")) + " "
     });
-    $.getJSON("https://raw.githubusercontent.com/ASkiingrock/haiku-writer/main/haiku%20writer/lastnames.json", function(lastnames) {
-        personname += choose(lastnames["lastnames"])
-        document.getElementById('text-author').innerHTML = "- " + personname + ", " + String(Math.floor(1800 + Math.random()*(2020 - 1800 + 1)))
+    fetch('https://raw.githubusercontent.com/ASkiingrock/haiku-writer/main/haiku%20writer/lastnamesv2.txt')
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+    personname += choose(data.split("\n"))
+    document.getElementById('text-author').innerHTML = "- " + personname + ", " + String(Math.floor(1800 + Math.random()*(2020 - 1800 + 1)))
     });
+        
     
 }

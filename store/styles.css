@@ -40,3 +40,7 @@ ul, label {
 font-family: 'Radio Canada', Sans-serif;
 font-weight: 200;
 }
+
+div{
+  outline:2px green
+}
