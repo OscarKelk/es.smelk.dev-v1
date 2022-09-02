@@ -11,17 +11,17 @@
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
 
-    <title>Smelk | Your order has been placed</title>
+    <title>Smelk | Su ordernar ha pedido</title>
     <link rel="icon" type="image/x-icon" href="/assets/logos/logo_coloured_notext.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       window.onload = function(){
         order_names = {  // Order ids to capitalised names
-            "smelk_suite": "Smelk Suite",
-            "funnyinator": "Funnyinator",
-            "mum_insulter": "Mum Insulter",
-            "text_editor": "Text Editor",
-            "stopwatch": "Stopwatch"
+            "smelk_suite": "Conjunto de Smelk",
+            "funnyinator": "Convertidor a Divertido",
+            "mum_insulter": "Insultador de las Madres",
+            "text_editor": "Editor de Texto",
+            "stopwatch": "Cronómetro"
         }
         const urlParams = new URLSearchParams(location.search); // Get URL parameters
 
@@ -35,10 +35,10 @@
         const name_titled = name[0].toUpperCase() + name.substring(1);
         if (order_item != null && quantity != null && name != null && email != null && address != null) {
           if (order_item != "" && quantity != "" && name != "" && email != "" && address != "") {
-            document.getElementById("order-header").innerHTML = name_titled + ", your order of " + quantity + " " + order_item_name + "(s) has been placed.";
+            document.getElementById("order-header").innerHTML = name_titled + ", su pedido de " + quantity + " " + order_item_name + "(s) ha estado hecho.";
 
             var rand = Math.random();
-            document.getElementById("business-days").innerHTML = "You should receive your order within " + Math.floor(rand*10) + "-" + Math.floor(rand*15) + " business days";
+            document.getElementById("business-days").innerHTML = "Recibirás su pedido dentro de " + Math.floor(rand*10) + "-" + Math.floor(rand*15) + " días hábiles";
             
             var settings = {
               "async": true,
@@ -52,7 +52,7 @@
               var map = L.map('map').setView([lat, long], 15);
               L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '© OpenStreetMap'}).addTo(map);
               var marker = L.marker([lat, long]).addTo(map);
-              marker.bindPopup("Order Address");
+              marker.bindPopup("Dirección");
             });
           }
         }
@@ -62,9 +62,9 @@
   <body>
     <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
-      <h2 id="order-header">Your order was not found</h2>
-      <p id="business-days">We cannot deliver your order</p>
-      <p>Thank you for your continued support of Smelk Innovations<p>
+      <h2 id="order-header">Hay una problem con su pedido</h2>
+      <p id="business-days">No podimos entregar su pedido</p>
+      <p>Gracias por su apoyo de Smelk Innovations<p>
       <div id="map"></div>
     </div>
   </body>

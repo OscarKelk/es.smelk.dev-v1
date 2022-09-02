@@ -10,6 +10,7 @@ body{
 
 iframe {
     position: fixed;
+    z-index:1
 }
 #navbar {
     border: none;
@@ -43,4 +44,60 @@ font-weight: 200;
 
 div{
   outline:2px green
+}
+img {
+  height: 150px
+}
+.man, .woman, .youth, .infant {
+  display: inline-block;
+  position: relative;
+}
+.man img, .woman img, .youth img, .infant img {
+  display: block
+}
+form.price{
+  display: inline-block;
+}
+input[type=submit]{
+  background-color: #04AA6D;
+  font-size:20px;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  margin-top: 5px;
+  margin-left:10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+p.price{
+  display:inline-block;
+  font-size:20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left:10px;
+}
+.overlay{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  height:150px;
+  opacity:0;
+  transition: 0.5s ease;
+  background-color: #000000;
+}
+.man:hover .overlay, .woman:hover .overlay, .youth:hover .overlay, .infant:hover .overlay{
+  opacity:0.7;
+}
+.text {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }

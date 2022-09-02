@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Smelk | Thank you for your donation</title>
+    <title> Smelk | Gracias para su donativo </title>
     <link rel="icon" type="image/x-icon" href="/assets/logos/logo_coloured_notext.png">
 
     <script>
@@ -13,14 +13,14 @@
         var name = urlParams.get("name"); // Donator name
         const donation_amount = urlParams.get("amount"); // Donation amount
         if (name == null || name == "") {
-          name = "Anonymous";
+          name = "Anónimo";
         }
         if (donation_amount != "" && donation_amount > 0) {
           totalDonations = parseInt(donation_amount) + totalDonations
-          document.getElementsByClassName("dmessage")[0].innerHTML = "Thank you, " + name +", for your donation of $" + donation_amount + "!";
-          document.getElementsByClassName("hmessage")[0].innerHTML = "Thank you for supporting us.";
-          document.getElementsByClassName("endmessage")[0].innerHTML = "Thank you for your continued support of Smelk Innovations.";
-          document.getElementsByClassName("totaldonations")[0].innerHTML = "So far, our loyal Smelk supporters have donated $" + String(totalDonations) + " to us.";
+          document.getElementsByClassName("dmessage")[0].innerHTML = "Gracias, " + name +", para su donativo de $" + donation_amount + "!";
+          document.getElementsByClassName("hmessage")[0].innerHTML = "Gracias por apoyar";
+          document.getElementsByClassName("endmessage")[0].innerHTML = "Gracias para su apoya de Smelk Innovations.";
+          document.getElementsByClassName("totaldonations")[0].innerHTML = "Hasta ahora, Hasta ahora, nuestros partidarios leal ha donado $" + String(totalDonations);
         }
       }
       </script>
@@ -28,14 +28,14 @@
   <body>
     <iframe style="top: 0px;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe>
     <div id="body">
-      <h1 class="hmessage">That's weird.</h1>
-      <p class="dmessage">Your donation was not found.</p>
-      <p class="endmessage">As one of our customers, our priority at Smelk Innovations is to you. Please try again.</p>
+      <h1 class="hmessage">Ese es raro.</h1>
+      <p class="dmessage">No se puede encontrar su donativo</p>
+      <p class="endmessage">Porque usted es un cliente, nuestra prioridad es para usted. Por favor, vuelve a intentarlo.</p>
       <br>
-      <h2>Your impact on us</h2>
-      <p class="totaldonations">So far, our loyal Smelk supporters have donated $0 to us.</p>
-      <p>Donating to Smelk Innovations, your funds go a long way. We have several <a href="/donate/#outreach">community outreach</a> programs that we donate a portion of your donation to, as well as to administration costs to keep your favourite company up and running.</p>
-      <p>A portion of your funds also go towards supporting our <a href="/donate/#projects">future projects</a>. Consider yourself an investor in the future of technology.</p>
+      <h2>Su impacto en nosotros</h2>
+      <p class="totaldonations">Hasta ahora, nuestros partidarios leal ha donado $0.</p>
+      <p>Donando a Smelk Innovations, su dinero es muy importante. Tenemos varios programas de <a href="/donate/#outreach">alcance comuniatrio</a> que donaremos una parte de su donativo, además de costos de administración que mantener su empresa favorito.</p>
+      <p>Una parte de su donativo se ulitizará para <a href="/donate/#projects">proyectos del futuro</a>. Usted es un inversor de tecnología.</p>
     </div>
   </body>
   

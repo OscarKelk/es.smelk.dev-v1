@@ -3,32 +3,32 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
-    <title>Smelk | Place your order</title>
+    <title>Smelk | Pedirlo</title>
     <link rel="icon" type="image/x-icon" href="/assets/logos/logo_coloured_notext.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         window.onload = function(){
           order_names = {  // Order ids to capitalised names
-            "smelk_suite": ["Smelk Suite", 97.50],
-            "funnyinator": ["Funnyinator", 25.95],
-            "mum_insulter": ["Mum Insulter", 35.95],
-            "text_editor": ["Text Editor", 29.99],
-            "stopwatch": ["Stopwatch", 0.25]
+            "smelk_suite": ["Conjunto de Smelk", 97.50],
+            "funnyinator": ["Convertidor a Divertido", 25.95],
+            "mum_insulter": ["Insultador de las Madres", 35.95],
+            "text_editor": ["Editor de Texto", 29.99],
+            "stopwatch": ["Cronómetro", 0.25]
           }
 
           urlParams = new URLSearchParams(location.search); // Get URL parameters
           order_item = urlParams.get("order_item"); // Order Item ID
           if (order_item != null && order_item != "") {
-            document.getElementById("order_h1").innerHTML = "Place your order of the " + order_names[order_item][0]; // Use name from order_names
-            document.getElementById("order_details_item").innerHTML = "Order Item: " + order_names[order_item][0]; // Use name from order_names
+            document.getElementById("order_h1").innerHTML = "Pedir el " + order_names[order_item][0]; // Use name from order_names
+            document.getElementById("order_details_item").innerHTML = "Producto: " + order_names[order_item][0]; // Use name from order_names
             document.getElementById("order-item-passthrough").value = order_item; // Pass order_item through to confirmation query string
           }
         }
         function quantityCallback(value) {
           var multiplier = order_names[order_item][1];
-          document.getElementById("order-total").innerHTML = "Order Total: $" + value*multiplier;
+          document.getElementById("order-total").innerHTML = "Total: $" + value*multiplier;
         }
-        $(document).ready(function() {  //jquery 😳
+        $(document).ready(function() {
             $(window).keydown(function(event){
                 if(event.keyCode == 13) {
                 event.preventDefault();
@@ -37,34 +37,33 @@
             });
         });
     </script>
-    <noscript>Sorry, your browser does not support JavaScript.</noscript>
   </head>
   <body>
     <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
     <div id="body">
-        <h1 id="order_h1">Place your Order</h1>
+        <h1 id="order_h1">Pedirlo</h1>
         <div class="side">
-            <h2>Order Details</h2>
-            <p id="order_details_item">Order Item: </p>
+            <h2>Detalles</h2>
+            <p id="order_details_item">Producto: </p>
             <div style="text-align: center;">
                 <form action="/order/orderConfirmation">
                     <input id="order-item-passthrough" type="hidden" name="order_item" value="order_item">
 
-                    <label for="quantity">Quantity: </label>
+                    <label for="quantity">Cantidad: </label>
                     <input type="number" id="quantity" name="quantity" placeholder="1" oninput="quantityCallback(this.value)">
                     <br>
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" name="name" placeholder="John Smelk">
+                    <label for="name">Nombre y Apellidos: </label>
+                    <input type="text" id="name" name="name" placeholder="Juan Smelk">
                     <br>
-                    <label for="email">Email: </label>
-                    <input type="email" id="email" name="email" placeholder="johnsmelk@smelk.dev">
+                    <label for="email">Correo Electrónico: </label>
+                    <input type="email" id="email" name="email" placeholder="juansmelk@smelk.dev">
                     <br>
-                    <label for="address">Ship To: </label>
-                    <input type="text" id="address" name="address" placeholder="1 Smelk Street">
+                    <label for="address">Dirección: </label>
+                    <input type="text" id="address" name="address" placeholder="C/Smelk 1">
                     <br>
                     <p id="order-total">Total: </p>
                     <br>
-                    <input class="nice-button" type="submit" value="Place">
+                    <input class="nice-button" type="submit" value="Pedirlo">
                 </form>
             </div>
         </div>

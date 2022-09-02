@@ -1,0 +1,67 @@
+<!--Page template Smelk Innovations-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Radio Canada" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Tienda de Smelk | Camiseta de Logotipo</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logos/logo_coloured_notext.png">
+    <script>
+      function show_image(src, height) {
+        var img = document.createElement("img");
+        img.src = src;
+        img.height = height;
+
+        document.body.appendChild(img);
+      }
+      window.onload = function(){
+        name_conversion = {
+          "smelk_logo": "Camisetas Nuevas",
+          "mens": "de Hombre",
+          "womens": "de Mujer",
+          "youth": "de Joven",
+          "infant": "de Bebé",
+          "black": "Negro/a",
+          "grey": "Gris",
+          "blue": "Azul",
+          "pink": "Rosa"
+        }
+        paths = {
+          "smelk_logo": "logoshirt",
+          "mens": "Hombre",
+          "womens": "Mujer",
+          "youth": "Joven",
+          "infant": "Bebé",
+          "black": "Negro/a",
+          "grey": "Gris",
+          "blue": "Azul",
+          "pink": "Rosa"
+        }
+        urlParams = new URLSearchParams(location.search); // Get URL parameters
+        order_item = urlParams.get("order_item"); // Order Item ID
+        order_category = urlParams.get("order_category");
+        order_colour = urlParams.get("order_colour");
+        img_path = "/assets/merch/"
+        img_path += paths[order_item] + "/" + paths[order_category] + " " + paths[order_colour] + ".png"
+        if (order_item != "" && order_item != null){
+          document.getElementById("head").innerHTML = name_conversion[order_item]
+          document.getElementById("details").innerHTML = "Viendo la camiseta " + name_conversion[order_colour] + " " + name_conversion[order_category] + "."
+          show_image(img_path, 150)
+        }
+      }
+    </script>
+  </head>
+  
+  <body>
+    <iframe style="top:0;" src="/navbar/navbar.html" id="navbar" title="navbar"></iframe> 
+    <div id="body">
+      <form style="position:absolute" action="/store/">
+        <input class="nice-button" type="submit" value="Back"/>
+      </form>
+      <h1 id="head">Ese es raro.</h1>
+      <p id="details">Por favor, vuelve a intentarlo.</p>
+      
+      
+    </div>
+  </body>
+</html>
